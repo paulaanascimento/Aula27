@@ -15,8 +15,10 @@ public abstract class Produtos {
 
     public abstract void mostrarDetalhesDoItem();
 
-    public boolean equals(Produtos obj) {
-        return codigoBarras.equals(obj.codigoBarras);
+    @Override
+    public boolean equals(Object obj) {
+        Produtos aux = (Produtos) obj;
+        return codigoBarras.equals(aux.codigoBarras);
     }
 
     public String getNome() {
